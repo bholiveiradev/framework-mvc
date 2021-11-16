@@ -1,0 +1,10 @@
+Options All -Indexes
+
+# LIGA O REWRITE URL
+RewriteEngine On
+
+# TUDO PARA INDEX
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ ./index.php [QSA,NC]
